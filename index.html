@@ -5,7 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./nation.js"></script>
+    <script src="./121.买卖股票最佳时机.js"></script>
+    <style>
+      .fs {
+        height: 100px;
+        width: 100px;
+      }
+      div {
+        border: 2px solid;
+        resize: horizontal;
+        overflow: auto;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <input id="input" type="text" />
+      <br />
+      <span id="span"> </span>
+    </div>
+    <script>
+      const text = document.getElementById("input");
+      const span = document.getElementById("span");
+      input.onkeyup = function () {
+        console.log(this);
+        span.innerHTML = text.value;
+      };
+      // 定义防抖函数
+      const debounce = function (fn, wait) {
+        // 自由变量，debounce执行完成被释放，time也不会被释放
+        let time; // 返回一个闭包
+        return function () {
+          // 清除上一次的定时器
+          if (time) {
+            clearTimeout(time);
+          }
+          // wait时间后执行
+          time = setTimeout(fn, wait);
+        };
+      };
+
+      // 通过闭包，得到一个方法
+      const changeName_ = debounce(changeName, 3000);
+
+      input.onkeyup = changeName_;
+
+
+
+      
+    </script>
+  </body>
 </html>

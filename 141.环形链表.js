@@ -28,13 +28,19 @@ var hasCycle = function (head) {
   //     head = head.next;
   //   }
   //   return false;
-  let slow = head;
-  let fast = head;
-  while (fast && fast.next) {
-    fast = fast.next.next;
-    slow = slow.next;
-    if (slow === fast) return true;
+  // let slow = head;
+  // let fast = head;
+  // while (fast && fast.next) {
+  //   fast = fast.next.next;
+  //   slow = slow.next;
+  //   if (slow === fast) return true;
+  // }
+  // return false;
+
+
+  delete(index){
+    const item =this.data[index]
+    this.shif
   }
-  return false;
 };
 // @lc code=end
